@@ -272,7 +272,7 @@ class OpenUrl (Action):
 
 class Launch (Action):
 	""" Launches an application (AppLeaf) """
-	rank_adjust = 5
+	rank_adjust = 0 
 	def __init__(self, name=None, is_running=False, open_new=False):
 		"""
 		If @is_running, style as if the app is running (Show application)
@@ -299,7 +299,7 @@ class Launch (Action):
 		return Action.get_icon_name(self)
 
 class LaunchAgain (Launch):
-	rank_adjust = 0
+	rank_adjust = 5
 	def __init__(self, name=None):
 		if not name:
 			name = _("Launch Again")
