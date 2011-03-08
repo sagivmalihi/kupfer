@@ -1516,6 +1516,8 @@ class WindowController (pretty.OutputMixin):
 		self.window.set_type_hint(gtk.gdk.WINDOW_TYPE_HINT_UTILITY)
 		self.window.set_property("skip-taskbar-hint", True)
 		self.window.set_keep_above(True)
+		self.window.set_decorated(False)
+
 		if not text_direction_is_ltr():
 			self.window.set_gravity(gtk.gdk.GRAVITY_NORTH_EAST)
 		# Setting not resizable changes from utility window
